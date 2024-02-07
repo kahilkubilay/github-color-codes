@@ -1,0 +1,23 @@
+{
+  "name": "@kahilkubilay/colorful-github",
+  "version": "1.0.0",
+  "description": "color codes for languages on github",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kahilkubilay/github-color-codes.git"
+  },
+  "keywords": [
+    "github-color-codes"
+  ],
+  "author": "kahilkubilay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kahilkubilay/github-color-codes/issues"
+  },
+  "homepage": "https://github.com/kahilkubilay/github-color-codes#readme",
+  "type": "module"
+}
