@@ -1,6 +1,22 @@
 # github-color-codes
 
+ ![github-color-codes logo](/public/colorful-github-logo.png)
+
 color codes for languages ​​on Github
+
+### install
+
+npm i colorful-github
+
+### usage 
+
+###### Vue
+```js
+import { getByLabel } from 'colorful-github1'
+const { label, color } = getByLabel('typescript')
+
+console.info('label:', label, 'color:', color)
+```
 
 ### attributes
 

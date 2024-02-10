@@ -1,7 +1,5 @@
-import { readFile } from 'fs/promises'
 import Logger from './logger.js'
-
-const source = JSON.parse(await readFile(new URL('./asset/colorSource.json', import.meta.url)))
+import source from './asset/source.js'
 
 export const getByLabel = (label) => {
   const formatLabel = label.toLowerCase().trim()
@@ -12,7 +10,11 @@ export const getByLabel = (label) => {
 
   const colorInformation = source.find((item) => item.label === formatLabel)
 
-  return colorInformation || Logger.notExists
+  if(!colorInformation) {
+    console.info(Logger.notExists)
+  }
+
+  return colorInformation || {}
 }
 
 export const getLabelsByColorCode = (code) => {
@@ -30,5 +32,9 @@ export const getLabelsByColorCode = (code) => {
 
   const labels = matchItems.map((item) => item.label)
 
-  return labels.length > 0 ? labels : Logger.notExists
+  if(labels.length <= 0) {
+    console.info(Logger.notExists)
+  }
+
+  return labels.length > 0 ? labels : []
 }
